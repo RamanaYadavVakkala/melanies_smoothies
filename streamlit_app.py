@@ -29,6 +29,7 @@ if ingredients_list:
     
     for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen + ' '
+        st.subheader(fruit_chosen+'Nutrition Information')
         fruityvice_response = requests.get("https://jsonplaceholder.typicode.com/posts")
         #st.text(fruityvice_response.json())
         fv_sv = st.dataframe(data=fruityvice_response.json(),use_container_width=True)
